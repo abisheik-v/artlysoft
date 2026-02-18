@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Code,
   MapPin,
@@ -72,11 +73,11 @@ const Footer = () => {
               <div className="footer-section">
                 <h5>Services</h5>
                 <ul>
-                  <li><a href="/services">Product Engineering</a></li>
-                  <li><a href="/services">Data & AI</a></li>
-                  <li><a href="/services">Cloud Services</a></li>
-                  <li><a href="/services">Automation</a></li>
-                  <li><a href="/services">Cybersecurity</a></li>
+                  <li><Link to="/services">Product Engineering</Link></li>
+                  <li><Link to="/services">Data & AI</Link></li>
+                  <li><Link to="/services">Cloud Services</Link></li>
+                  <li><Link to="/services">Automation</Link></li>
+                  <li><Link to="/services">Cybersecurity</Link></li>
                 </ul>
               </div>
             </div>
@@ -85,11 +86,11 @@ const Footer = () => {
               <div className="footer-section">
                 <h5>Industries</h5>
                 <ul>
-                  <li><a href="/industries">Healthcare</a></li>
-                  <li><a href="/industries">Finance</a></li>
-                  <li><a href="/industries">Manufacturing</a></li>
-                  <li><a href="/industries">Retail</a></li>
-                  <li><a href="/industries">Logistics</a></li>
+                  <li><Link to="/industries">Healthcare</Link></li>
+                  <li><Link to="/industries">Finance</Link></li>
+                  <li><Link to="/industries">Manufacturing</Link></li>
+                  <li><Link to="/industries">Retail</Link></li>
+                  <li><Link to="/industries">Logistics</Link></li>
                 </ul>
               </div>
             </div>
@@ -98,11 +99,11 @@ const Footer = () => {
               <div className="footer-section">
                 <h5>Company</h5>
                 <ul>
-                  <li><a href="/about">About Us</a></li>
-                  <li><a href="/careers">Careers</a></li>
-                  <li><a href="/industries">News & Events</a></li>
-                  <li><a href="/services">Case Studies</a></li>
-                  <li><a href="/">Partners</a></li>
+                  <li><Link to="/about">About Us</Link></li>
+                  <li><Link to="/careers">Careers</Link></li>
+                  <li><Link to="/industries">News & Events</Link></li>
+                  <li><Link to="/services">Case Studies</Link></li>
+                  <li><Link to="/">Partners</Link></li>
                 </ul>
               </div>
             </div>
@@ -112,10 +113,10 @@ const Footer = () => {
                 <h5>Resources</h5>
                 <ul>
 
-                  <li><a href="/services">Whitepapers</a></li>
-                  <li><a href="/">Documentation</a></li>
-                  <li><a href="/industries">Support</a></li>
-                  <li><a href="/contact">Contact</a></li>
+                  <li><Link to="/services">Whitepapers</Link></li>
+                  <li><Link to="/">Documentation</Link></li>
+                  <li><Link to="/industries">Support</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
                 </ul>
               </div>
             </div>
