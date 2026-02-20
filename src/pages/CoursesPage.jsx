@@ -18,6 +18,8 @@ const CoursesPage = () => {
     course: ''
   });
 
+  const [isUnlocked, setIsUnlocked] = React.useState(false);
+
   const handleInputChange = (e) => {
     const { id, value } = e.target;
     setFormData(prev => ({
@@ -28,10 +30,35 @@ const CoursesPage = () => {
 
   const isFormValid = formData.name && formData.phone && formData.email && formData.course && formData.course !== 'Select a course...';
 
+  const handleSubmitEnquiry = (e) => {
+    e.preventDefault();
+    if (isFormValid) {
+      // 1. WhatsApp Logic
+      const phoneNumber = "919901718700"; // Country code + number
+      const message = `Hello, I would like to enquire about a course.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nCourse: ${formData.course}`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      window.open(whatsappUrl, '_blank');
+
+      // 2. Unlock & Reset Logic
+      setIsUnlocked(true);
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        course: ''
+      });
+
+      // Optional: You might want to show a success alert or toast here
+      // alert("Enquiry submitted! The brochure is now unlocked."); 
+    }
+  };
+
   const handleDownloadClick = (e) => {
-    if (!isFormValid) {
+    if (!isUnlocked) {
       e.preventDefault();
-      alert('Please fill out the enquiry form to unlock the brochure download.');
+      alert('Please fill out and submit the enquiry form to unlock the brochure download.');
     }
   };
 
@@ -796,21 +823,21 @@ const CoursesPage = () => {
 
                     {/* Locked/Unlocked Download Button */}
                     <div className="position-relative">
-                      {!isFormValid && (
+                      {!isUnlocked && (
                         <div className="mb-2 text-warning fw-bold small">
                           <Lock size={14} className="me-1 mb-1" />
-                          Fill form to unlock
+                          Submit form to unlock
                         </div>
                       )}
                       <a
-                        href={isFormValid ? brochure : '#'}
-                        download={isFormValid ? "Artlysoft_Training_Brochure.pdf" : undefined}
+                        href={isUnlocked ? brochure : '#'}
+                        download={isUnlocked ? "Artlysoft_Training_Brochure.pdf" : undefined}
                         onClick={handleDownloadClick}
-                        className={`btn btn-lg fw-bold rounded-pill px-4 d-inline-flex align-items-center transition-all ${isFormValid ? 'btn-light hover-scale' : 'btn-white-50 cursor-not-allowed opacity-50'}`}
-                        style={{ pointerEvents: isFormValid ? 'auto' : 'none' }}
+                        className={`btn btn-lg fw-bold rounded-pill px-4 d-inline-flex align-items-center transition-all ${isUnlocked ? 'btn-light hover-scale' : 'btn-white-50 cursor-not-allowed opacity-50'}`}
+                        style={{ pointerEvents: isUnlocked ? 'auto' : 'no-drop' }} // Changed to no-drop to show it's disabled but still visible
                       >
-                        {isFormValid ? <Download size={20} className="me-2" /> : <Lock size={20} className="me-2" />}
-                        {isFormValid ? 'Download Now' : 'Locked'}
+                        {isUnlocked ? <Download size={20} className="me-2" /> : <Lock size={20} className="me-2" />}
+                        {isUnlocked ? 'Download Now' : 'Locked'}
                       </a>
                     </div>
                   </div>
@@ -820,7 +847,7 @@ const CoursesPage = () => {
                     <h3 className="fw-bold text-primary mb-2">Enquire Now</h3>
                     <p className="text-theme-responsive mb-4">Fill out the form below and our team will get back to you shortly.</p>
 
-                    <form onSubmit={(e) => e.preventDefault()}>
+                    <form onSubmit={handleSubmitEnquiry}>
                       <div className="mb-3">
                         <label htmlFor="name" className="form-label text-theme-responsive fw-semibold">Full Name</label>
                         <input
