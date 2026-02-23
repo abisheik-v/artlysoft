@@ -60,7 +60,11 @@ const Footer = () => {
                 </div>
                 <div className="d-flex gap-2 mb-3">
                   <Phone size={16} className="text-primary mt-1" />
-                  <span>+91 9901718700</span>
+                  <span>
+                    <a href="https://wa.me/919901718700" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-reset">
+                      +91 9901718700
+                    </a>
+                  </span>
                 </div>
                 <div className="d-flex gap-2">
                   <Mail size={16} className="text-primary mt-1" />

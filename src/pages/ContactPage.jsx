@@ -121,7 +121,7 @@ Here are my details:
     const encodedMessage = encodeURIComponent(message);
     const phoneNumber = '919901718700'; // <-- Replace with your WhatsApp number
 
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
     setTimeout(() => {
       setIsSubmitting(false);

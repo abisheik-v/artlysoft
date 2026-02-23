@@ -18,7 +18,9 @@ const CoursesPage = () => {
     course: ''
   });
 
-  const [isUnlocked, setIsUnlocked] = React.useState(false);
+  const [isUnlocked, setIsUnlocked] = React.useState(() => {
+    return localStorage.getItem('brochureUnlocked') === 'true';
+  });
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -39,10 +41,11 @@ const CoursesPage = () => {
       const encodedMessage = encodeURIComponent(message);
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-      window.open(whatsappUrl, '_blank');
-
-      // 2. Unlock & Reset Logic
+      // 2. Unlock & Persist
+      localStorage.setItem('brochureUnlocked', 'true');
       setIsUnlocked(true);
+
+      // 3. Clear Form
       setFormData({
         name: '',
         phone: '',
@@ -50,8 +53,8 @@ const CoursesPage = () => {
         course: ''
       });
 
-      // Optional: You might want to show a success alert or toast here
-      // alert("Enquiry submitted! The brochure is now unlocked."); 
+      // 4. Redirect
+      window.location.href = whatsappUrl;
     }
   };
 
@@ -714,7 +717,11 @@ const CoursesPage = () => {
                   <Phone size={24} />
                 </div>
                 <h4 className="fw-bold mb-2">Phone</h4>
-                <p className="mb-0 text-theme-responsive">9901718700</p>
+                <p className="mb-0 text-theme-responsive">
+                  <a href="https://wa.me/919901718700" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-theme-responsive">
+                    9901718700
+                  </a>
+                </p>
               </div>
             </div>
           </div>
