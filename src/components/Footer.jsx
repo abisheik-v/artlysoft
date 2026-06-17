@@ -90,11 +90,11 @@ const Footer = () => {
               <div className="footer-section">
                 <h5>Industries</h5>
                 <ul>
-                  <li><Link to="/industries">Healthcare</Link></li>
-                  <li><Link to="/industries">Finance</Link></li>
-                  <li><Link to="/industries">Manufacturing</Link></li>
-                  <li><Link to="/industries">Retail</Link></li>
-                  <li><Link to="/industries">Logistics</Link></li>
+                  <li><Link to="#">Healthcare</Link></li>
+                  <li><Link to="#">Finance</Link></li>
+                  <li><Link to="#">Manufacturing</Link></li>
+                  <li><Link to="#">Retail</Link></li>
+                  <li><Link to="#">Logistics</Link></li>
                 </ul>
               </div>
             </div>

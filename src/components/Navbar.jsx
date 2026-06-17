@@ -132,7 +132,7 @@ const Navbar = () => {
               <li><NavLink to="/" className="nav-link" onClick={handleNavLinkClick} end>Home</NavLink></li>
               <li><NavLink to="/about" className="nav-link" onClick={handleNavLinkClick}>About</NavLink></li>
               <li><NavLink to="/services" className="nav-link" onClick={handleNavLinkClick}>Services</NavLink></li>
-              <li><NavLink to="/industries" className="nav-link" onClick={handleNavLinkClick}>Industries</NavLink></li>
+            
 
 
               <li><NavLink to="/careers" className="nav-link" onClick={handleNavLinkClick}>Careers</NavLink></li>
