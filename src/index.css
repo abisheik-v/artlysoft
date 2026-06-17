@@ -93,6 +93,10 @@ body {
   color: var(--text-color);
   background-color: var(--bg-primary);
   transition: var(--transition-medium);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
 }
 
 .artylsoft-root {
@@ -100,6 +104,8 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-color);
   transition: var(--transition-medium);
+  overflow-y: clip !important;   
+  overflow-x: hidden !important; 
 }
 
 /* Typography */
@@ -273,6 +279,44 @@ p {
 
 .navbar-nav .dropdown-toggle::after {
   display: none;
+}
+.navbar-nav .nav-link.active::after,
+.navbar-nav .dropdown-toggle.active::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0px !important;
+  left: 0.5rem !important;
+  right: 0.5rem !important;
+  height: 2px !important;            /* Controls the absolute thickness */
+  background-color: var(--primary-color) !important;
+  border-radius: 2px !important;
+  transform: none !important;        /* Prevents any Bootstrap scale effects */
+  display: block !important;
+}
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .dropdown-toggle.active {
+  color: var(--primary-color) !important;
+  background-color: transparent !important;
+}
+.navbar-nav .nav-link.active::after,
+.navbar-nav .dropdown-toggle.active::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 2. Apply a uniform border-bottom directly to the text items instead */
+.navbar-nav .nav-link {
+  border-bottom: 2px solid transparent !important;
+  padding-bottom: 4px !important; /* Adjust this space to bring the line closer or further from text */
+  margin-bottom: -2px !important; /* Keeps the container alignment crisp */
+}
+
+/* 3. Color the border explicitly when the items are active */
+.navbar-nav .nav-link.active,
+.navbar-nav .dropdown-toggle.active {
+  border-bottom-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  border-radius: 0 !important; /* Ensures the line stays flat and sharp */
 }
 
 /* Mobile Toggle Button */
@@ -1141,6 +1185,7 @@ button.btn-hero:hover {
 
 .carousel-indicators {
   bottom: 2rem;
+  display: none;
 }
 
 .carousel-indicators button {
@@ -1285,6 +1330,7 @@ button.btn-hero:hover {
   margin-bottom: 1rem;
   color: var(--text-color);
 }
+
 
 .capability-description {
   color: var(--text-muted);
@@ -1740,7 +1786,7 @@ button.btn-hero:hover {
 
   .container {
     max-width: 1320px;
-  }
+  } 
 
   .carousel-content {
     max-width: 600px;
@@ -1944,7 +1990,7 @@ button.btn-hero:hover {
 
   /* Hero carousel adjustments */
   .hero-carousel {
-    height: 80vh;
+    height: 70vh;
   }
 
   .carousel-item {
@@ -2358,7 +2404,9 @@ button.btn-hero:hover {
 
   /* Hero carousel */
   .hero-carousel {
-    height: 50vh;
+    min-height: 65vh;
+    padding-top: 64px;
+    height: auto !important;
   }
 
   .carousel-item {
@@ -2424,6 +2472,10 @@ button.btn-hero:hover {
   .section-subtitle {
     font-size: 0.8rem;
     margin-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   /* Cards */

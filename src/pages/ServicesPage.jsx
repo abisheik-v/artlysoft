@@ -25,6 +25,7 @@ import {
   Workflow,
   Boxes
 } from 'lucide-react';
+import { NavHashLink } from 'react-router-hash-link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -282,7 +283,8 @@ function ServicesPage() {
                 From product engineering to intelligent automation, we deliver end-to-end solutions that drive digital transformation and business growth.
               </p>
               <div className="d-flex gap-3 mb-5" data-aos="fade-right" data-aos-delay="200">
-                <a href="#services-overview" className="btn-hero">Explore Services</a>
+                
+                <NavHashLink smooth to="#services-overview" className="btn-hero">Explore Services</NavHashLink>
               </div>
               <div className="row g-3" data-aos="fade-right" data-aos-delay="300">
                 <div className="col-4 text-center">

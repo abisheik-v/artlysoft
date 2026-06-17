@@ -139,21 +139,21 @@ const capabilities = [
 const testimonials = [
   {
     quote: "Artylsoft transformed our healthcare platform with their innovative AI solutions. The team's expertise and dedication exceeded our expectations.",
-    author: "Mr. Dinesh Kumar",
+    author: "Praveen T V",
     position: "CTO, MedTech Solutions",
-    avatar: "DK"
+    avatar: "PT"
   },
   {
-    quote: "Their cloud migration strategy saved us 40% in infrastructure costs while improving our system performance significantly.",
+    quote: "Their cloud migration strategy saved us 40% in infrastructure costs while improving our system performance significantly. A Promising Team with clear vision",
     author: "Arun",
     position: "IT Director, FinanceCore",
     avatar: "AN"
   },
   {
     quote: "The intelligent automation solutions implemented by Artylsoft increased our operational efficiency by 60%. Outstanding work!",
-    author: "kalikrishnan",
+    author: "Prajwal S M",
     position: "Operations Manager, LogiFlow",
-    avatar: "kK"
+    avatar: "PS"
   }
 ];
 
@@ -304,8 +304,8 @@ function HomePage() {
             <div className="col-lg-10 mx-auto">
               <div className="capability-card" data-aos="fade-up">
                 <h2 className="section-title text-center mb-4">About Artlysoft Private Limited</h2>
-                <p className="section-subtitle text-center lead text-theme-responsive fs-4">
-                  Artlysoft Private Limited is a fast-growing IT company based in Krishnagiri, Tamil Nadu. We provide complete technology solutions — from web and cloud development to AI automation and IT consulting. Our goal is to help organizations grow through innovative and reliable digital transformation.
+                <p className="section-subtitle about-text lead fs-4">
+                  Artlysoft Private Limited is a fast-growing IT company based in Karnataka, Tamil Nadu. We provide complete technology solutions — from web and cloud development to AI automation and IT consulting. Our goal is to help organizations grow through innovative and reliable digital transformation.
                 </p>
               </div>
             </div>

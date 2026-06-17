@@ -13,6 +13,7 @@ import {
   Zap,
   Target
 } from 'lucide-react';
+import { NavHashLink } from 'react-router-hash-link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -113,7 +114,9 @@ function CareersPage() {
                 At Artlysoft, we value creativity, learning, and collaboration. We're always looking for passionate professionals who love solving problems through technology.
               </p>
               <div className="d-flex gap-3 mb-5" data-aos="fade-right" data-aos-delay="200">
-                <a href="#open-positions" className="btn-hero">View Open Positions</a>
+                <NavHashLink smooth to="#open-positions" className="btn-hero">
+                  View Open Positions
+                </NavHashLink>
               </div>
               <div className="row g-3" data-aos="fade-right" data-aos-delay="300">
                 <div className="col-4 text-center">

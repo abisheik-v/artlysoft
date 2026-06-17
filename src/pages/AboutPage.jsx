@@ -14,6 +14,8 @@ import {
   Lightbulb,
   Handshake
 } from 'lucide-react';
+import { NavHashLink } from 'react-router-hash-link';
+import { Link } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -112,14 +114,16 @@ function AboutPage() {
         <div className="container">
           <div className="row align-items-center min-vh-100">
             <div className="col-lg-6">
-              <h1 className="display-3 fw-bold mb-4 text-theme-responsive" data-aos="fade-right">
+              <h1 className="display-3 fw-bold py-5 mt-5 text-theme-responsive" data-aos="fade-right">
                 About <span className="gradient-text">Artlysoft Private Limited</span>
               </h1>
               <p className="lead mb-4 text-theme-responsive" data-aos="fade-right" data-aos-delay="100">
                 Artlysoft Private Limited is an emerging IT services company delivering customized digital solutions to global clients. Founded with a vision to empower businesses through technology, Artlysoft combines innovation, expertise, and dedication to create value-driven solutions.
               </p>
               <div className="d-flex gap-3 mb-5" data-aos="fade-right" data-aos-delay="200">
-                <a href="#our-story" className="btn-hero">Our Story</a>
+                <NavHashLink smooth to="#our-story" className="btn-hero">
+              Our Story
+                </NavHashLink>
               </div>
             </div>
             <div className="col-lg-6">
@@ -140,7 +144,7 @@ function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section id="our-story" className="capabilities">
+      <section id="mision-vision" className="capabilities">
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-6">

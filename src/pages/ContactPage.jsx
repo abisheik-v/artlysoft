@@ -20,6 +20,7 @@ import {
   FileText,
   Headphones
 } from 'lucide-react';
+import { NavHashLink } from 'react-router-hash-link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -156,7 +157,7 @@ Here are my details:
                 Whether you're looking for a technology partner or want to discuss collaboration opportunities, our team is ready to connect.
               </p>
               <div className="d-flex gap-3 mb-5" data-aos="fade-right" data-aos-delay="200">
-                <a href="#Details-form" className="btn-hero">Contact us</a>
+                <NavHashLink smooth to="#contact-form" className="btn-hero">Contact us</NavHashLink>
               </div>
               <div className="row g-3">
                 <div className="col-4">
@@ -387,15 +388,15 @@ Here are my details:
             <div className="col-lg-10">
               <div className="rounded-4 shadow-lg overflow-hidden">
                 <iframe
-                  title="Company Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.370757982573!2d78.2903173146216!3d12.274151591318409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac9b96be3e4173%3A0x78b5c5a7f28c3a3!2sPochampalli%2C%20Tamil%20Nadu%20635206!5e0!3m2!1sen!2sin!4v1687873212456!5m2!1sen!2sin"
-                  width="100%"
-                  height="400"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+  title="Company Location"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248815.57510906996!2d77.45716234747289!3d12.988259658455469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1781262005757!5m2!1sen!2sin"
+  width="100%"
+  height="400"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
               </div>
             </div>
           </div>
@@ -412,9 +413,7 @@ Here are my details:
                 Join 500+ companies that have transformed their business with our innovative solutions.
               </p>
               <div className="d-flex gap-3 justify-content-center">
-                <a href="#contact-form" className="btn btn-light btn-lg">
-                  Get Started Today <ArrowRight size={20} className="ms-2" />
-                </a>
+                <NavHashLink smooth to="#contact-form" className="btn-hero">Get Started Today</NavHashLink>
               </div>
             </div>
           </div>

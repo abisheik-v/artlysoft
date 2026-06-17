@@ -56,7 +56,7 @@ const Footer = () => {
                 </p>
                 <div className="d-flex gap-2 mb-3">
                   <MapPin size={16} className="text-primary mt-1" />
-                  <span>Krishnagiri, Tamil Nadu, India</span>
+                  <span>Bangalore, Karnataka, India</span>
                 </div>
                 <div className="d-flex gap-2 mb-3">
                   <Phone size={16} className="text-primary mt-1" />
