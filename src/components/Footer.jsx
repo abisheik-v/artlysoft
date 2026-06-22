@@ -58,11 +58,7 @@ const Footer = () => {
                 </p>
                 <div className="d-flex gap-2 mb-3">
                   <MapPin size={16} className="text-primary mt-1" />
-<<<<<<< HEAD
                   <span>Bangalore, Karnataka, India</span>
-=======
-                  <span>Bengaluru, Karnataka, India</span>
->>>>>>> 6de1b5b (Updated project with latest changes)
                 </div>
                 <div className="d-flex gap-2 mb-3">
                   <Phone size={16} className="text-primary mt-1" />
@@ -96,18 +92,10 @@ const Footer = () => {
               <div className="footer-section">
                 <h5>Careers</h5>
                 <ul>
-<<<<<<< HEAD
-                  <li><Link to="#">Healthcare</Link></li>
-                  <li><Link to="#">Finance</Link></li>
-                  <li><Link to="#">Manufacturing</Link></li>
-                  <li><Link to="#">Retail</Link></li>
-                  <li><Link to="#">Logistics</Link></li>
-=======
                   <li><Link to="/careers">Software Developer</Link></li>
-                  <li><Link to="/careers">Devops Engineer</Link></li>
+                  <li><Link to="/careers">DevOps Engineer</Link></li>
                   <li><Link to="/careers">AI/ML Intern</Link></li>
                   <li><Link to="/careers">IT Consultant</Link></li>
->>>>>>> 6de1b5b (Updated project with latest changes)
                 </ul>
               </div>
             </div>
