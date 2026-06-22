@@ -9,6 +9,8 @@ import {
   Twitter,
   Linkedin,
   Instagram,
+  Youtube,
+  Github,
   ArrowUp
 } from 'lucide-react';
 import logo from '../Assets/images/logo.png';
@@ -56,7 +58,11 @@ const Footer = () => {
                 </p>
                 <div className="d-flex gap-2 mb-3">
                   <MapPin size={16} className="text-primary mt-1" />
+<<<<<<< HEAD
                   <span>Bangalore, Karnataka, India</span>
+=======
+                  <span>Bengaluru, Karnataka, India</span>
+>>>>>>> 6de1b5b (Updated project with latest changes)
                 </div>
                 <div className="d-flex gap-2 mb-3">
                   <Phone size={16} className="text-primary mt-1" />
@@ -88,13 +94,20 @@ const Footer = () => {
 
             <div className="col-lg-2 col-md-6">
               <div className="footer-section">
-                <h5>Industries</h5>
+                <h5>Careers</h5>
                 <ul>
+<<<<<<< HEAD
                   <li><Link to="#">Healthcare</Link></li>
                   <li><Link to="#">Finance</Link></li>
                   <li><Link to="#">Manufacturing</Link></li>
                   <li><Link to="#">Retail</Link></li>
                   <li><Link to="#">Logistics</Link></li>
+=======
+                  <li><Link to="/careers">Software Developer</Link></li>
+                  <li><Link to="/careers">Devops Engineer</Link></li>
+                  <li><Link to="/careers">AI/ML Intern</Link></li>
+                  <li><Link to="/careers">IT Consultant</Link></li>
+>>>>>>> 6de1b5b (Updated project with latest changes)
                 </ul>
               </div>
             </div>
@@ -104,8 +117,8 @@ const Footer = () => {
                 <h5>Company</h5>
                 <ul>
                   <li><Link to="/about">About Us</Link></li>
-                  <li><Link to="/careers">Careers</Link></li>
-                  <li><Link to="/industries">News & Events</Link></li>
+                  <li><Link to="/courses">Courses</Link></li>
+                  <li><Link to="#">News & Events</Link></li>
                   <li><Link to="/services">Case Studies</Link></li>
                   <li><Link to="/">Partners</Link></li>
                 </ul>
@@ -119,7 +132,7 @@ const Footer = () => {
 
                   <li><Link to="/services">Whitepapers</Link></li>
                   <li><Link to="/">Documentation</Link></li>
-                  <li><Link to="/industries">Support</Link></li>
+                  <li><Link to="#">Support</Link></li>
                   <li><Link to="/contact">Contact</Link></li>
                 </ul>
               </div>
@@ -130,6 +143,15 @@ const Footer = () => {
             <div className="social-links">
               <a href="https://www.instagram.com/artly_soft?igsh=MW5sZGJpaWp3cnBjdg==" className="social-link" target="_blank" rel="noopener noreferrer">
                 <Instagram size={20} />
+              </a>
+              <a href="https://www.facebook.com/share/1Psq5pJ1L2/" className="social-link" target="_blank" rel="noopener noreferrer">
+                <Facebook size={20} />
+              </a>
+              <a href="https://youtube.com/@artlysoftprivatelimited?si=jkp8QbDDpDsLTxX8" className="social-link" target="_blank" rel="noopener noreferrer">
+                <Youtube size={20} />
+              </a>
+              <a href="https://github.com/Artlysoft-Pvt-Ltd" className="social-link" target="_blank" rel="noopener noreferrer">
+                <Github size={20} />
               </a>
             </div>
             <p className="text-muted">&copy; 2025 Artlysoft Private Limited. All rights reserved.</p>

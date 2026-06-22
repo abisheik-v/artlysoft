@@ -824,7 +824,7 @@ const CoursesPage = () => {
                       </div>
                     </div>
                     <h3 className="fw-bold mb-3">Course Brochure</h3>
-                    <p className="mb-4 opacity-75">
+                    <p className="mb-4 opacity-75 c-para">
                       Get detailed curriculum, syllabus, and program highlights in our comprehensive brochure.
                     </p>
 

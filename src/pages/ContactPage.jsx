@@ -56,7 +56,7 @@ const contactMethods = [
     icon: MapPin,
     title: 'Visit Our Office',
     description: 'Meet us in person at our headquarters',
-    contact: 'Krishnagiri, Tamil Nadu, India',
+    contact: 'Bengaluru, Karnataka, India',
     action: '#location'
   },
   {

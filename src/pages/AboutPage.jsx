@@ -12,6 +12,8 @@ import {
   ArrowRight,
   Eye,
   Lightbulb,
+  Linkedin,
+  Github,
   Handshake
 } from 'lucide-react';
 import { NavHashLink } from 'react-router-hash-link';
@@ -25,6 +27,13 @@ import '../index.css';
 
 // Import AOS
 import AOS from 'aos';
+import p1 from '../assets/images/Anand.jpg';
+import p2 from '../assets/images/Abisheik.jpg';
+
+import p3 from '../assets/images/Ajith.jpg';
+import p4 from '../assets/images/Tamil.jpg';
+import p5 from '../assets/images/Preethi.jpg';
+
 
 const values = [
   {
@@ -84,7 +93,20 @@ const leadership = [
   }
 ];
 
+const teamMembers = [
+  {id: 1, name: "Anand T", role: "Director", image: p1, linkedIn: "", github: ""},
+  {id: 2, name: "Abisheik V", role: "Frontend Developer", image: p2, linkedIn: "https://www.linkedin.com/in/abisheik-kumar-v-8a4202257/", github: "https://github.com/Abisheik-V"},
+  {id: 3, name: "Ajith M", role: "Web Developer", image: p3, linkedIn: "https://www.linkedin.com/in/ajith-m-044823418/", github: "https://github.com/ajith17123"},
+  {id: 4, name: "Tamilmozhi S", role: "Web Developer", image: p4, linkedIn: "https://www.linkedin.com/in/tamilmozhi-s-63032a311/", github: "https://github.com/Tamilmozhi2003"},
+  {id: 5, name: "Preethika C", role: "Web Developer", image: p5, linkedIn: "https://www.linkedin.com/in/preethi-c-989352392/", github: "https://github.com/sudhapreethika76-eng"},
+]
+
+
+
 function AboutPage() {
+
+  const [activeMember, setActiveMember] = useState(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     // Set SEO meta tags
@@ -102,6 +124,9 @@ function AboutPage() {
     // Refresh AOS when component mounts
     AOS.refresh();
   }, []);
+
+
+  const doubleMembers = [...teamMembers, ...teamMembers];
 
 
 
@@ -204,6 +229,66 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+            {/* Our Team */}
+<section className='team-sec' id='our-team'>
+        <div className='team-header text-center mb-5'>
+          <h2 className="section-title text-theme-responsive" data-aos="fade-up">Our Team</h2>
+          <h4 className='team-h' data-aos="fade-left">Meet the people behind our success</h4>
+          <p className='team-para' data-aos="fade-right">A passionate team of builders, thinkers, and innovators.</p>
+        </div>
+        
+        {/* Infinite Marquee Loop */}
+        <div 
+          className={`marquee-container ${isPaused ? 'paused' : ''}`}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => !activeMember && setIsPaused(false)}
+        >
+          <div className="marquee-track">
+            {doubleMembers.map((member, index) => {
+              const isSelected = activeMember === member.id;
+              
+              return (
+                <div 
+                    key={`${member.id}-${index}`} 
+                    className="team-card"
+                   >
+                  <div className="image-wrapper">
+                    <img src={member.image} alt={member.name} />
+                    
+        
+                    <div className="social-overlay">
+                      <div className="social-links" onClick={(e) => e.stopPropagation()}>
+                        {member.linkedIn && (
+                          <a href={member.linkedIn} target="_blank" rel="noreferrer" className="icon-link">
+                            <Linkedin size={20} />
+                          </a>
+                        )}
+                        {member.github && (
+                          <a href={member.github} target="_blank" rel="noreferrer" className="icon-link">
+                            <Github size={20} />
+                          </a>
+                        )}
+                        {!member.linkedIn && !member.github && (
+                          <span className="no-links text-white-50 small">No handles linked</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="info-box">
+                    <h3>{member.name}</h3>
+                    <p>{member.role}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+
+</section>
+        
 
       {/* Our Story */}
       <section id="our-story" className="capabilities">
