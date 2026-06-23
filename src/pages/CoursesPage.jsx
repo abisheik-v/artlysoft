@@ -823,7 +823,11 @@ const CoursesPage = () => {
                         <FileText size={40} />
                       </div>
                     </div>
+<<<<<<< HEAD
                     <h3 className="fw-bold mb-3 fs-4 class-font">Course Brochure</h3>
+=======
+                    <h3 className="fw-bold mb-3">Course Brochure</h3>
+>>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
                     <p className="mb-4 opacity-75 c-para">
                       Get detailed curriculum, syllabus, and program highlights in our comprehensive brochure.
                     </p>
