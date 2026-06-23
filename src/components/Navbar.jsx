@@ -45,8 +45,14 @@ const Navbar = () => {
         <div className="container-fluid d-flex justify-content-between align-items-center px-4">
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img src={logo} alt="Logo" style={{ height: 32, width: 32, marginRight: 8 }} />
-            <span>Artlysoft Private Limited</span>
+            <span><span className='class-font'>A</span>rtlysoft Private Limited</span>
           </Link>
+
+          <div className="d-flex align-items-center gap-3 d-lg-none ms-auto">
+            <button className="navbar-toggler border-0" onClick={toggleNav}>
+              {isNavOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
 
           <div className="d-none d-lg-flex align-items-center gap-4">
             <ul className="navbar-nav flex-row gap-4 align-items-center">
@@ -55,7 +61,10 @@ const Navbar = () => {
 
               {/* Services */}
               <li className="nav-item dropdown position-static">
-                <NavLink className="nav-link dropdown-toggle" to="/services">Services</NavLink>
+                <NavLink 
+    className={({ isActive }) => `nav-link dropdown-toggle ${isActive || window.location.pathname.startsWith('/services') ? 'active' : ''}`} 
+    to="/services"
+  >Services</NavLink>
                 <div className="mega-menu services-menu">
                   <div className="d-flex">
                     <div className="menu-col">
@@ -88,51 +97,7 @@ const Navbar = () => {
                 </div>
               </li>
 
-              {/* Industries */}
-              <li className="nav-item dropdown position-static">
-                <NavLink className="nav-link dropdown-toggle" to="/industries">Industries</NavLink>
-                <div className="mega-menu industries-menu">
-                  <div className="d-flex">
-                    <div className="menu-col">
-                      <h6>BFSI</h6>
-                      <Link to="#">Digital banking</Link>
-                      <Link to="#">Credit scoring</Link>
-                      <Link to="#">RPA claims</Link>
-                      <Link to="#">Onboarding</Link>
-                    </div>
-                    <div className="menu-col">
-                      <h6>Healthcare</h6>
-                      <Link to="#">Telemedicine</Link>
-                      <Link to="#">HIPAA systems</Link>
-                      <Link to="#">AI diagnostics</Link>
-                      <Link to="#">EHR integration</Link>
-                    </div>
-                    <div className="menu-col border-divider">
-                      <h6>Pharma</h6>
-                      <Link to="#">Drug discovery</Link>
-                      <Link to="#">Clinical AI</Link>
-                      <Link to="#">Lab automation</Link>
-                      <Link to="#">Compliance</Link>
-                    </div>
-                    <div className="menu-col">
-                      <h6>Manufacturing</h6>
-                      <Link to="#">IoT maintenance</Link>
-                      <Link to="#">Smart factories</Link>
-                      <Link to="#">ERP automation</Link>
-                      <Link to="#">Analytics dashboards</Link>
-                    </div>
-                    <div className="menu-col">
-                      <h6>ISVs / Hi-Tech</h6>
-                      <Link to="#">SaaS development</Link>
-                      <Link to="#">API engineering</Link>
-                      <Link to="#">CI/CD acceleration</Link>
-                      <Link to="#">AI co-pilot</Link>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-
+              
 
               <li className="nav-item"><NavLink className="nav-link" to="/careers">Careers</NavLink></li>
               <li className="nav-item"><NavLink className="nav-link" to="/courses">Courses</NavLink></li>
@@ -157,11 +122,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="d-flex align-items-center gap-3 d-lg-none">
-            <button className="navbar-toggler border-0" onClick={toggleNav}>
-              {isNavOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          
         </div>
 
         {/* Mobile Menu */}
@@ -171,7 +132,7 @@ const Navbar = () => {
               <li><NavLink to="/" className="nav-link" onClick={handleNavLinkClick} end>Home</NavLink></li>
               <li><NavLink to="/about" className="nav-link" onClick={handleNavLinkClick}>About</NavLink></li>
               <li><NavLink to="/services" className="nav-link" onClick={handleNavLinkClick}>Services</NavLink></li>
-              <li><NavLink to="/industries" className="nav-link" onClick={handleNavLinkClick}>Industries</NavLink></li>
+            
 
 
               <li><NavLink to="/careers" className="nav-link" onClick={handleNavLinkClick}>Careers</NavLink></li>

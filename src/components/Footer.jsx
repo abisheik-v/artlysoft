@@ -9,7 +9,10 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  ArrowUp
+  Youtube,
+  Github,
+  ArrowUp,
+  MonitorCog 
 } from 'lucide-react';
 import logo from '../Assets/images/logo.png';
 
@@ -48,7 +51,7 @@ const Footer = () => {
                   <div className="brand-icon me-3">
                     <img src={logo} alt="Logo" style={{ height: 32, width: 32 }} />
                   </div>
-                  <h5 className="mb-0">Artlysoft Private Limited</h5>
+                  <h5 className="mb-0"> <span className='class-font'>A</span>rtlysoft Private Limited</h5>
                 </div>
                 <p className="text-muted mb-4">
                   Transforming businesses through innovative technology solutions.
@@ -56,7 +59,7 @@ const Footer = () => {
                 </p>
                 <div className="d-flex gap-2 mb-3">
                   <MapPin size={16} className="text-primary mt-1" />
-                  <span>Krishnagiri, Tamil Nadu, India</span>
+                  <span>Bengaluru, Karnataka, India</span>
                 </div>
                 <div className="d-flex gap-2 mb-3">
                   <Phone size={16} className="text-primary mt-1" />
@@ -75,7 +78,7 @@ const Footer = () => {
 
             <div className="col-lg-2 col-md-6">
               <div className="footer-section">
-                <h5>Services</h5>
+                <h5 className='class-font'>Services</h5>
                 <ul>
                   <li><Link to="/services">Product Engineering</Link></li>
                   <li><Link to="/services">Data & AI</Link></li>
@@ -88,24 +91,23 @@ const Footer = () => {
 
             <div className="col-lg-2 col-md-6">
               <div className="footer-section">
-                <h5>Industries</h5>
+                <h5 className='class-font'>Careers</h5>
                 <ul>
-                  <li><Link to="/industries">Healthcare</Link></li>
-                  <li><Link to="/industries">Finance</Link></li>
-                  <li><Link to="/industries">Manufacturing</Link></li>
-                  <li><Link to="/industries">Retail</Link></li>
-                  <li><Link to="/industries">Logistics</Link></li>
+                  <li><Link to="/careers">Software Developer</Link></li>
+                  <li><Link to="/careers">Devops Engineer</Link></li>
+                  <li><Link to="/careers">AI/ML Intern</Link></li>
+                  <li><Link to="/careers">IT Consultant</Link></li>
                 </ul>
               </div>
             </div>
 
             <div className="col-lg-2 col-md-6">
               <div className="footer-section">
-                <h5>Company</h5>
+                <h5 className='class-font'>Company</h5>
                 <ul>
                   <li><Link to="/about">About Us</Link></li>
-                  <li><Link to="/careers">Careers</Link></li>
-                  <li><Link to="/industries">News & Events</Link></li>
+                  <li><Link to="/courses">Courses</Link></li>
+                  <li><Link to="#">News & Events</Link></li>
                   <li><Link to="/services">Case Studies</Link></li>
                   <li><Link to="/">Partners</Link></li>
                 </ul>
@@ -114,12 +116,12 @@ const Footer = () => {
 
             <div className="col-lg-2 col-md-6">
               <div className="footer-section">
-                <h5>Resources</h5>
+                <h5 className='class-font'>Resources</h5>
                 <ul>
 
                   <li><Link to="/services">Whitepapers</Link></li>
                   <li><Link to="/">Documentation</Link></li>
-                  <li><Link to="/industries">Support</Link></li>
+                  <li><Link to="#">Support</Link></li>
                   <li><Link to="/contact">Contact</Link></li>
                 </ul>
               </div>
@@ -131,9 +133,18 @@ const Footer = () => {
               <a href="https://www.instagram.com/artly_soft?igsh=MW5sZGJpaWp3cnBjdg==" className="social-link" target="_blank" rel="noopener noreferrer">
                 <Instagram size={20} />
               </a>
+              <a href="https://www.facebook.com/share/1Psq5pJ1L2/" className="social-link" target="_blank" rel="noopener noreferrer">
+                <Facebook size={20} />
+              </a>
+              <a href="https://youtube.com/@artlysoftprivatelimited?si=jkp8QbDDpDsLTxX8" className="social-link" target="_blank" rel="noopener noreferrer">
+                <Youtube size={20} />
+              </a>
+              <a href="https://github.com/Artlysoft-Pvt-Ltd" className="social-link" target="_blank" rel="noopener noreferrer">
+                <Github size={20} />
+              </a>
             </div>
-            <p className="text-muted">&copy; 2025 Artlysoft Private Limited. All rights reserved.</p>
-            <p className="text-muted">Designed with 💻 by Artlysoft Web Team.</p>
+            <p className="text-muted">&copy; 2025 <span className='class-font'>A</span>rtlysoft Private Limited. All rights reserved.</p>
+            <p className="text-muted">Designed with <MonitorCog size={20} style={{ color: "#129BE5"}} /> by Artlysoft Web Team.</p>
           </div>
         </div>
       </footer>

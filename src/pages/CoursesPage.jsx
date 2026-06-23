@@ -77,10 +77,10 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
-              <h2 className="display-5 fw-bold text-primary mb-4">About Artlysoft Private Limited</h2>
+              <h2 className="display-5 fw-bold text-primary mb-4">About <span className='class-font'>A</span>rtlysoft Private Limited</h2>
               <div className="text-theme-responsive">
                 <p className="lead mb-4">
-                  Artlysoft Private Limited is a technology-driven IT services and consulting company focused on
+                  <span className='class-font'>A</span>rtlysoft Private Limited is a technology-driven IT services and consulting company focused on
                   software development, DevOps, AI-enabled solutions, and enterprise IT consulting. Our mission
                   is to bridge the gap between academic knowledge and real-world industry requirements by
                   delivering practical, job-oriented training programs.
@@ -112,7 +112,7 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row justify-content-center mb-5">
             <div className="col-lg-8 text-center">
-              <h3 className="fw-bold text-theme-responsive mb-4">Our training philosophy centers on three core pillars:</h3>
+              <h3 className="fw-bold text-theme-responsive mb-4 fs-4 class-font">Our training philosophy centers on three core pillars</h3>
             </div>
           </div>
 
@@ -128,7 +128,7 @@ const CoursesPage = () => {
                   <p className="text-theme-responsive text-muted">
                     Curriculum aligned with current market demands
                   </p>
-                  <div className="mt-3 text-primary fw-bold display-6 opacity-25">1</div>
+                  <div className="mt-3 text-primary fw-bold display-6 opacity-85">1</div>
                 </div>
               </div>
             </div>
@@ -144,7 +144,7 @@ const CoursesPage = () => {
                   <p className="text-theme-responsive text-muted">
                     Real-world projects and case studies
                   </p>
-                  <div className="mt-3 text-primary fw-bold display-6 opacity-25">2</div>
+                  <div className="mt-3 text-primary fw-bold display-6 opacity-85">2</div>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@ const CoursesPage = () => {
                   <p className="text-theme-responsive text-muted">
                     Comprehensive placement assistance and mentorship
                   </p>
-                  <div className="mt-3 text-primary fw-bold display-6 opacity-25">3</div>
+                  <div className="mt-3 text-primary fw-bold display-6 opacity-85">3</div>
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-lg-8 mx-auto text-center">
-              <h2 className="display-5 fw-bold text-primary mb-4">Program Overview</h2>
+              <h2 className="display-5 fw-bold text-primary mb-4 fs-1 class-font">Program Overview</h2>
               <div className="text-theme-responsive lead">
                 <p className="mb-4">
                   The Full Stack Python & Java Online Training Program is a comprehensive, career-focused
@@ -268,7 +268,7 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-5 fw-bold text-primary mb-4">Key Highlights</h2>
+              <h2 className="display-5 fw-bold text-primary mb-4 fs-1 class-font">Key Highlights</h2>
             </div>
           </div>
 
@@ -313,7 +313,7 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-5 fw-bold mb-4 text-theme-responsive">
+              <h2 className="display-5 fw-bold mb-4 text-theme-responsive fs-1 class-font">
                 Why Choose <span className="text-primary">Artlysoft?</span>
               </h2>
             </div>
@@ -371,7 +371,7 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-5 fw-bold text-primary mb-3">Learning Path</h2>
+              <h2 className="display-5 fw-bold text-primary mb-3 fs-1 class-font">Learning Path</h2>
               <p className="lead text-theme-responsive">Our structured learning approach ensures progressive skill development:</p>
             </div>
           </div>
@@ -430,7 +430,7 @@ const CoursesPage = () => {
                     <div className="learning-path-content">
                       <h4 className="fw-bold mb-2 text-theme-responsive">
                         <span className="text-primary d-block mb-1 small text-uppercase">{item.stage}</span>
-                        {item.title}
+                       <span className='class-font fs-6'> {item.title}</span>
                       </h4>
                       <p className="text-muted mb-0">{item.desc}</p>
                     </div>
@@ -447,7 +447,7 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-5 fw-bold text-theme-responsive mb-4">
+              <h2 className="display-5 fw-bold text-theme-responsive mb-4 class-font fs-1">
                 Technology Stack <span className="text-primary">Covered</span>
               </h2>
             </div>
@@ -461,7 +461,7 @@ const CoursesPage = () => {
                   <div className="tech-stack-icon-wrapper">
                     <Monitor size={28} />
                   </div>
-                  <div className="tech-stack-number">01</div>
+                  <div className="tech-stack-number text-white-50">01</div>
                 </div>
                 <div className="tech-stack-content">
                   <h4 className="fw-bold text-primary mb-3">Frontend</h4>
@@ -482,7 +482,7 @@ const CoursesPage = () => {
                   <div className="tech-stack-icon-wrapper">
                     <Layers size={28} />
                   </div>
-                  <div className="tech-stack-number">02</div>
+                  <div className="tech-stack-number text-white-50">02</div>
                 </div>
                 <div className="tech-stack-content">
                   <h4 className="fw-bold text-primary mb-3">Backend</h4>
@@ -503,7 +503,7 @@ const CoursesPage = () => {
                   <div className="tech-stack-icon-wrapper">
                     <Briefcase size={28} />
                   </div>
-                  <div className="tech-stack-number">03</div>
+                  <div className="tech-stack-number text-white-50">03</div>
                 </div>
                 <div className="tech-stack-content">
                   <h4 className="fw-bold text-primary mb-3">Database & DevOps</h4>
@@ -525,7 +525,7 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-5 fw-bold text-theme-responsive mb-4">Who Can Apply</h2>
+              <h2 className="display-5 fw-bold text-theme-responsive mb-4 fs-1 class-font">Who Can Apply</h2>
             </div>
           </div>
 
@@ -533,7 +533,7 @@ const CoursesPage = () => {
             {/* Students & Fresh Graduates */}
             <div className="col-md-4">
               <div className="apply-card">
-                <h4>Students & Fresh Graduates</h4>
+                <h4 className='class-font fs-5'>Students & Fresh Graduates</h4>
                 <ul className="apply-list">
                   <li>Looking to start a career in software development</li>
                   <li>Want practical experience before entering the job market</li>
@@ -544,7 +544,7 @@ const CoursesPage = () => {
             {/* Career Switchers */}
             <div className="col-md-4">
               <div className="apply-card">
-                <h4>Career Switchers</h4>
+                <h4 className='class-font fs-5'>Career Switchers</h4>
                 <ul className="apply-list">
                   <li>Professionals from non-IT backgrounds interested in development</li>
                   <li>Existing IT professionals looking to upskill in full stack development</li>
@@ -555,7 +555,7 @@ const CoursesPage = () => {
             {/* Working IT Professionals */}
             <div className="col-md-4">
               <div className="apply-card">
-                <h4>Working IT Professionals</h4>
+                <h4 className='class-font fs-5'>Working IT Professionals</h4>
                 <ul className="apply-list">
                   <li>Wanting to expand their skillset</li>
                   <li>Aiming for career growth and better opportunities</li>
@@ -568,7 +568,7 @@ const CoursesPage = () => {
           <div className="row">
             <div className="col-12">
               <div className="apply-card text-center py-4">
-                <h4>Non-IT Background Candidates</h4>
+                <h4 className='class-font fs-5'>Non-IT Background Candidates</h4>
                 <div className="d-flex flex-column flex-md-row justify-content-center gap-md-5 gap-3 non-it-text">
                   <div className="d-flex align-items-center justify-content-center gap-2">
                     <span className="text-primary fw-bold">•</span> Passionate about coding and technology
@@ -588,7 +588,7 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-5 fw-bold text-theme-responsive mb-4">
+              <h2 className="display-5 fw-bold text-theme-responsive mb-4 class-font fs-1">
                 Career <span className="text-primary">Opportunities</span>
               </h2>
             </div>
@@ -601,7 +601,7 @@ const CoursesPage = () => {
                 <div className="career-icon-wrapper">
                   <Layers size={32} />
                 </div>
-                <h4>Full Stack Developer</h4>
+                <h4 className='class-font fs-5'>Full Stack Developer</h4>
                 <p>Design and develop complete web applications</p>
               </div>
             </div>
@@ -612,7 +612,7 @@ const CoursesPage = () => {
                 <div className="career-icon-wrapper">
                   <Code size={32} />
                 </div>
-                <h4>Java Developer</h4>
+                <h4 className='class-font fs-5'>Java Developer</h4>
                 <p>Develop enterprise-level applications</p>
               </div>
             </div>
@@ -623,7 +623,7 @@ const CoursesPage = () => {
                 <div className="career-icon-wrapper">
                   <Monitor size={32} />
                 </div>
-                <h4>Software Engineer</h4>
+                <h4 className='class-font fs-5'>Software Engineer</h4>
                 <p>Work on complex software systems</p>
               </div>
             </div>
@@ -634,7 +634,7 @@ const CoursesPage = () => {
                 <div className="career-icon-wrapper">
                   <FileText size={32} />
                 </div>
-                <h4>Python Developer</h4>
+                <h4 className='class-font fs-5'>Python Developer</h4>
                 <p>Build backend services and automation tools</p>
               </div>
             </div>
@@ -645,7 +645,7 @@ const CoursesPage = () => {
                 <div className="career-icon-wrapper">
                   <Database size={32} />
                 </div>
-                <h4>Backend Developer</h4>
+                <h4 className='class-font fs-5'>Backend Developer</h4>
                 <p>Focus on server-side logic and databases</p>
               </div>
             </div>
@@ -668,7 +668,7 @@ const CoursesPage = () => {
           {/* Job Market Demand - Simple Text */}
           <div className="row mt-5">
             <div className="col-lg-10 mx-auto text-center">
-              <h3 className="h4 fw-bold text-primary mb-3">Job Market Demand</h3>
+              <h3 className="h4 fw-bold text-primary mb-3 class-font">Job Market Demand</h3>
               <p className="lead text-theme-responsive">
                 Full stack developer roles are among the most in-demand positions in India's IT industry. Companies actively seek graduates with hands-on project experience and modern technology expertise.
               </p>
@@ -682,12 +682,12 @@ const CoursesPage = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-5 fw-bold text-theme-responsive mb-2">Contact Us & Enrollment</h2>
+              <h2 className="display-5 fw-bold text-theme-responsive mb-2 class-font fs-2">Contact Us <span style={{fontFamily: "Alike"}}>&</span> Enrollment</h2>
               <h3 className="h4 text-primary fw-bold">Get in Touch</h3>
             </div>
           </div>
 
-          <div className="row g-4 mb-5">
+          <div className="row g-4 mb-5 text-center justify-content-center">
             {/* Email */}
             <div className="col-md-4">
               <div className="contact-card">
@@ -718,7 +718,7 @@ const CoursesPage = () => {
                 </div>
                 <h4 className="fw-bold mb-2">Phone</h4>
                 <p className="mb-0 text-theme-responsive">
-                  <a href="https://wa.me/919901718700" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-theme-responsive">
+                  <a href="https://wa.me/919901718700" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-primary">
                     9901718700
                   </a>
                 </p>
@@ -729,7 +729,7 @@ const CoursesPage = () => {
           {/* Enrollment Process */}
           <div className="row mb-4">
             <div className="col-12 text-center">
-              <h3 className="h4 text-theme-responsive fw-bold mb-4">Enrollment Process</h3>
+              <h3 className="h4 text-theme-responsive fw-bold mb-4 class-font">Enrollment Process</h3>
             </div>
           </div>
 
@@ -792,12 +792,12 @@ const CoursesPage = () => {
             <div className="col-12">
               <hr className="mb-5 text-muted opacity-25" />
               <div className="empower-banner text-center">
-                <h2 className="display-4 mb-4 text-theme-responsive">
+                <h2 className="display-4 mb-4 text-theme-responsive class-font fs-2">
                   Empowering Careers Through <br />
                   <span className="text-highlight">Practical Technology Training</span>
                 </h2>
                 <p className="lead text-theme-responsive mb-4 mx-auto" style={{ maxWidth: '800px' }}>
-                  Join Artlysoft's Full Stack Python & Java Training Program and take the first step toward a rewarding career in software development.
+                  Join <span className='class-font'>A</span>rtlysoft's Full Stack Python & Java Training Program and take the first step toward a rewarding career in software development.
                 </p>
                 <h4 className="fw-bold text-theme-responsive">
                   Your journey to becoming a full stack developer starts here!
@@ -823,8 +823,8 @@ const CoursesPage = () => {
                         <FileText size={40} />
                       </div>
                     </div>
-                    <h3 className="fw-bold mb-3">Course Brochure</h3>
-                    <p className="mb-4 opacity-75">
+                    <h3 className="fw-bold mb-3 fs-4 class-font">Course Brochure</h3>
+                    <p className="mb-4 opacity-75 c-para">
                       Get detailed curriculum, syllabus, and program highlights in our comprehensive brochure.
                     </p>
 
@@ -851,7 +851,7 @@ const CoursesPage = () => {
 
                   {/* Right Column: Enquiry Form */}
                   <div className="col-md-7 bg-theme-secondary p-5">
-                    <h3 className="fw-bold text-primary mb-2">Enquire Now</h3>
+                    <h3 className="fw-bold text-primary mb-2 class-font fs-3" >Enquire Now</h3>
                     <p className="text-theme-responsive mb-4">Fill out the form below and our team will get back to you shortly.</p>
 
                     <form onSubmit={handleSubmitEnquiry}>

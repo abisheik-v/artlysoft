@@ -4,6 +4,8 @@
 /* AOS CSS */
 @import 'aos/dist/aos.css';
 
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 /* Custom CSS for Artylsoft Technologies Homepage */
 
 :root {
@@ -37,6 +39,7 @@
   --transition-fast: all 0.2s ease;
   --transition-medium: all 0.3s ease;
   --transition-slow: all 0.5s ease;
+  --font-head: "Cinzel Decorative";  
 }
 
 /* Theme Variables */
@@ -54,6 +57,7 @@
   --border-color: var(--border-light);
   --shadow: var(--shadow-light);
   --grid-color: %23cbd5e1;
+  
   /* Light grid color */
 }
 
@@ -88,11 +92,17 @@ html {
 html,
 body {
   overflow-x: hidden !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: "Alike", "Helvetica Neue";
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-primary);
   transition: var(--transition-medium);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.class-font {
+  font-family: var(--font-head);
 }
 
 .artylsoft-root {
@@ -100,6 +110,8 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-color);
   transition: var(--transition-medium);
+  overflow-y: clip !important;   
+  overflow-x: hidden !important; 
 }
 
 /* Typography */
@@ -273,6 +285,44 @@ p {
 
 .navbar-nav .dropdown-toggle::after {
   display: none;
+}
+.navbar-nav .nav-link.active::after,
+.navbar-nav .dropdown-toggle.active::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0px !important;
+  left: 0.5rem !important;
+  right: 0.5rem !important;
+  height: 2px !important;            /* Controls the absolute thickness */
+  background-color: var(--primary-color) !important;
+  border-radius: 2px !important;
+  transform: none !important;        /* Prevents any Bootstrap scale effects */
+  display: block !important;
+}
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .dropdown-toggle.active {
+  color: var(--primary-color) !important;
+  background-color: transparent !important;
+}
+.navbar-nav .nav-link.active::after,
+.navbar-nav .dropdown-toggle.active::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 2. Apply a uniform border-bottom directly to the text items instead */
+.navbar-nav .nav-link {
+  border-bottom: 2px solid transparent !important;
+  padding-bottom: 4px !important; /* Adjust this space to bring the line closer or further from text */
+  margin-bottom: -2px !important; /* Keeps the container alignment crisp */
+}
+
+/* 3. Color the border explicitly when the items are active */
+.navbar-nav .nav-link.active,
+.navbar-nav .dropdown-toggle.active {
+  border-bottom-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  border-radius: 0 !important; /* Ensures the line stays flat and sharp */
 }
 
 /* Mobile Toggle Button */
@@ -1141,6 +1191,7 @@ button.btn-hero:hover {
 
 .carousel-indicators {
   bottom: 2rem;
+  display: none;
 }
 
 .carousel-indicators button {
@@ -1173,6 +1224,7 @@ button.btn-hero:hover {
   text-align: center;
   margin-bottom: 1rem;
   color: var(--text-color);
+  font-family: var(--font-head);
 }
 
 .section-subtitle {
@@ -1285,6 +1337,7 @@ button.btn-hero:hover {
   margin-bottom: 1rem;
   color: var(--text-color);
 }
+
 
 .capability-description {
   color: var(--text-muted);
@@ -1740,7 +1793,7 @@ button.btn-hero:hover {
 
   .container {
     max-width: 1320px;
-  }
+  } 
 
   .carousel-content {
     max-width: 600px;
@@ -1944,7 +1997,7 @@ button.btn-hero:hover {
 
   /* Hero carousel adjustments */
   .hero-carousel {
-    height: 80vh;
+    height: 70vh;
   }
 
   .carousel-item {
@@ -2358,7 +2411,9 @@ button.btn-hero:hover {
 
   /* Hero carousel */
   .hero-carousel {
-    height: 50vh;
+    min-height: 65vh;
+    padding-top: 64px;
+    height: auto !important;
   }
 
   .carousel-item {
@@ -2424,6 +2479,10 @@ button.btn-hero:hover {
   .section-subtitle {
     font-size: 0.8rem;
     margin-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   /* Cards */
@@ -3344,7 +3403,6 @@ button.btn-hero:hover {
 .tech-stack-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: rgba(37, 99, 235, 0.2);
   line-height: 1;
 }
 
@@ -3672,6 +3730,9 @@ button.btn-hero:hover {
 .non-it-text {
   color: var(--text-muted);
 }
+.c-para {
+  color: #ffffff;
+}
 
 [data-theme="dark"] .non-it-text {
   color: #ffffff !important;
@@ -3717,10 +3778,11 @@ button.btn-hero:hover {
   background: rgba(37, 99, 235, 0.1);
   border-radius: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
 }
 
 .process-step-container {
@@ -3810,4 +3872,144 @@ button.btn-hero:hover {
 
 [data-theme="dark"] .form-select {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Container sizing & layout structure */
+.team-sec {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.marquee-container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  padding: 20px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 24px;
+  animation: scrollMarquee 25s linear infinite;
+}
+
+/* Toggle marquee pause when active or hovered */
+.marquee-container.paused .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 12px)); }
+}
+
+/* Card sizing standards */
+.team-card {
+  background: #131625;
+  border-radius: 16px;
+  min-width: 280px;
+  max-width: 280px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.team-card.active {
+  border-color: #6366f1; 
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 340px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.4s ease;
+}
+
+
+.team-card:hover .image-wrapper img {
+  filter: blur(8px) brightness(0.4);
+}
+
+/* Overlay nodes setup */
+.social-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .social-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.team-card:hover {
+  border-color: #6366f1;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.15);
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.icon-link {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  font-size: 1.4rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.icon-link:hover {
+  background: #6366f1;
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+.info-box {
+  padding: 20px;
+  background: #111422;
+  text-align: center;
+}
+
+.info-box h3 {
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  font-size: 1.15rem;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6366f1;
+}
+
+.status-footer {
+  font-size: 0.85rem;
+  color: #8b92b5;
+}
+
+.team.sec {
+  background-color: var(--dark-bg);
 }

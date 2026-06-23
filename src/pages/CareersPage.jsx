@@ -13,6 +13,7 @@ import {
   Zap,
   Target
 } from 'lucide-react';
+import { NavHashLink } from 'react-router-hash-link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -113,7 +114,9 @@ function CareersPage() {
                 At Artlysoft, we value creativity, learning, and collaboration. We're always looking for passionate professionals who love solving problems through technology.
               </p>
               <div className="d-flex gap-3 mb-5" data-aos="fade-right" data-aos-delay="200">
-                <a href="#open-positions" className="btn-hero">View Open Positions</a>
+                <NavHashLink smooth to="#open-positions" className="btn-hero">
+                  View Open Positions
+                </NavHashLink>
               </div>
               <div className="row g-3" data-aos="fade-right" data-aos-delay="300">
                 <div className="col-4 text-center">
@@ -163,7 +166,7 @@ function CareersPage() {
                 <div className="capability-icon mx-auto">
                   <Heart size={32} />
                 </div>
-                <h4 className="capability-title">Creative Environment</h4>
+                <h4 className="capability-title class-font">Creative Environment</h4>
                 <p className="capability-description">Work in an environment that encourages innovation and creative problem-solving.</p>
               </div>
             </div>
@@ -172,7 +175,7 @@ function CareersPage() {
                 <div className="capability-icon mx-auto">
                   <GraduationCap size={32} />
                 </div>
-                <h4 className="capability-title">Continuous Learning</h4>
+                <h4 className="capability-title class-font">Continuous Learning</h4>
                 <p className="capability-description">Access to training, workshops, and opportunities to work with cutting-edge technologies.</p>
               </div>
             </div>
@@ -181,7 +184,7 @@ function CareersPage() {
                 <div className="capability-icon mx-auto">
                   <Users size={32} />
                 </div>
-                <h4 className="capability-title">Team Collaboration</h4>
+                <h4 className="capability-title class-font">Team Collaboration</h4>
                 <p className="capability-description">Work alongside talented professionals in a collaborative and supportive team environment.</p>
               </div>
             </div>
@@ -210,7 +213,7 @@ function CareersPage() {
                       <position.icon size={32} />
                     </div>
                     <div>
-                      <h4 className="capability-title mb-2">{position.title}</h4>
+                      <h4 className="capability-title mb-2 ">{position.title}</h4>
                       <p className="capability-description mb-3">{position.description}</p>
                       <h6 className="fw-bold mb-2">Requirements:</h6>
                       <ul className="list-unstyled">

@@ -25,6 +25,7 @@ import {
   Workflow,
   Boxes
 } from 'lucide-react';
+import { NavHashLink } from 'react-router-hash-link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,7 +41,7 @@ const services = [
     id: 'software-modernization',
     icon: Settings,
     title: 'Software Modernization',
-    description: 'We will assess your legacy software and offer modernization activities to improve its overall efficiency and reduce maintenance costs. This includes all components of your IT ecosystem.',
+    description: 'We will assess your legacy software and offer modernization activities to improve its overall efficiency and reduce maintenance costs.',
     features: [
       {
         icon: Layers,
@@ -282,7 +283,8 @@ function ServicesPage() {
                 From product engineering to intelligent automation, we deliver end-to-end solutions that drive digital transformation and business growth.
               </p>
               <div className="d-flex gap-3 mb-5" data-aos="fade-right" data-aos-delay="200">
-                <a href="#services-overview" className="btn-hero">Explore Services</a>
+                
+                <NavHashLink smooth to="#services-overview" className="btn-hero">Explore Services</NavHashLink>
               </div>
               <div className="row g-3" data-aos="fade-right" data-aos-delay="300">
                 <div className="col-4 text-center">
@@ -334,7 +336,7 @@ function ServicesPage() {
                         <service.icon size={32} />
                       </div>
                       <div>
-                        <h3 className="capability-title mb-2">{service.title}</h3>
+                        <h3 className="capability-title mb-2 class-font ">{service.title}</h3>
                         <p className="capability-description mb-0">{service.description}</p>
                       </div>
                     </div>
@@ -353,7 +355,7 @@ function ServicesPage() {
                       <div className="capability-icon mb-3">
                         <feature.icon size={24} />
                       </div>
-                      <h5 className="capability-title">{feature.title}</h5>
+                      <h5 className="capability-title class-font">{feature.title}</h5>
                       <p className="capability-description">{feature.description}</p>
                     </div>
                   </div>
@@ -394,7 +396,7 @@ function ServicesPage() {
                   <div className="process-step-number mb-3">
                     <span className="display-4 fw-bold text-primary">{step.step}</span>
                   </div>
-                  <h4 className="capability-title">{step.title}</h4>
+                  <h4 className="capability-title class-font" >{step.title}</h4>
                   <p className="capability-description">{step.description}</p>
                 </div>
               </div>
@@ -406,7 +408,7 @@ function ServicesPage() {
       {/* CTA Section */}
       <section className="stats bg-primary text-white py-5">
         <div className="container text-center">
-          <h2 className="mb-4 text-white" data-aos="fade-up">Ready to Transform Your Business?</h2>
+          <h2 className="mb-4 text-white class-font fs-2" data-aos="fade-up" >Ready to Transform Your Business?</h2>
           <p className="opacity-75 mb-4 lead text-white" data-aos="fade-up" data-aos-delay="100">
             Let's discuss how our services can help you achieve your digital transformation goals.
           </p>
