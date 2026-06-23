@@ -306,11 +306,7 @@ function HomePage() {
               <div className="capability-card" data-aos="fade-up">
                 <h2 className="section-title text-center mb-4">About Artlysoft Private Limited</h2>
                 <p className="section-subtitle about-text lead fs-4">
-<<<<<<< HEAD
                   <span className='class-font'>A</span>rtlysoft Private Limited is a fast-growing IT company based in Karnataka, Tamil Nadu. We provide complete technology solutions — from web and cloud development to AI automation and IT consulting. Our goal is to help organizations grow through innovative and reliable digital transformation.
-=======
-                  Artlysoft Private Limited is a fast-growing IT company based in Karnataka, Tamil Nadu. We provide complete technology solutions — from web and cloud development to AI automation and IT consulting. Our goal is to help organizations grow through innovative and reliable digital transformation.
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
                 </p>
               </div>
             </div>

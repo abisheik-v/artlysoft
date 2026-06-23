@@ -11,12 +11,8 @@ import {
   Instagram,
   Youtube,
   Github,
-<<<<<<< HEAD
   ArrowUp,
   MonitorCog 
-=======
-  ArrowUp
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
 } from 'lucide-react';
 import logo from '../Assets/images/logo.png';
 
@@ -63,11 +59,7 @@ const Footer = () => {
                 </p>
                 <div className="d-flex gap-2 mb-3">
                   <MapPin size={16} className="text-primary mt-1" />
-<<<<<<< HEAD
                   <span>Bengaluru, Karnataka, India</span>
-=======
-                  <span>Bangalore, Karnataka, India</span>
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
                 </div>
                 <div className="d-flex gap-2 mb-3">
                   <Phone size={16} className="text-primary mt-1" />
@@ -99,17 +91,10 @@ const Footer = () => {
 
             <div className="col-lg-2 col-md-6">
               <div className="footer-section">
-<<<<<<< HEAD
                 <h5 className='class-font'>Careers</h5>
                 <ul>
                   <li><Link to="/careers">Software Developer</Link></li>
                   <li><Link to="/careers">Devops Engineer</Link></li>
-=======
-                <h5>Careers</h5>
-                <ul>
-                  <li><Link to="/careers">Software Developer</Link></li>
-                  <li><Link to="/careers">DevOps Engineer</Link></li>
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
                   <li><Link to="/careers">AI/ML Intern</Link></li>
                   <li><Link to="/careers">IT Consultant</Link></li>
                 </ul>

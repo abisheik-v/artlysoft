@@ -14,11 +14,8 @@ import {
   Lightbulb,
   Linkedin,
   Github,
-<<<<<<< HEAD
   Instagram, 
   MessageCircle,
-=======
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
   Handshake
 } from 'lucide-react';
 import { NavHashLink } from 'react-router-hash-link';
@@ -99,11 +96,7 @@ const leadership = [
 ];
 
 const teamMembers = [
-<<<<<<< HEAD
   {id: 1, name: "Anand T", role: "Director", image: p1, insta: "https://www.instagram.com/anand77002?igsh=MTNxZ3d2MGNrNTlweA==", whatsapp: "https://wa.me/message/J6EL6M6BJSWIF1"},
-=======
-  {id: 1, name: "Anand T", role: "Director", image: p1, linkedIn: "", github: ""},
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
   {id: 2, name: "Abisheik V", role: "Frontend Developer", image: p2, linkedIn: "https://www.linkedin.com/in/abisheik-kumar-v-8a4202257/", github: "https://github.com/Abisheik-V"},
   {id: 3, name: "Ajith M", role: "Web Developer", image: p3, linkedIn: "https://www.linkedin.com/in/ajith-m-044823418/", github: "https://github.com/ajith17123"},
   {id: 4, name: "Tamilmozhi S", role: "Web Developer", image: p4, linkedIn: "https://www.linkedin.com/in/tamilmozhi-s-63032a311/", github: "https://github.com/Tamilmozhi2003"},
@@ -149,11 +142,7 @@ function AboutPage() {
           <div className="row align-items-center min-vh-100">
             <div className="col-lg-6">
               <h1 className="display-3 fw-bold py-5 mt-5 text-theme-responsive" data-aos="fade-right">
-<<<<<<< HEAD
                 About <span className="gradient-text"> <span className='class-font'>A</span>rtlysoft Private Limited</span>
-=======
-                About <span className="gradient-text">Artlysoft Private Limited</span>
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
               </h1>
               <p className="lead mb-4 text-theme-responsive" data-aos="fade-right" data-aos-delay="100">
                 <span className='class-font'>A</span>rtlysoft Private Limited is an emerging IT services company delivering customized digital solutions to global clients. Founded with a vision to empower businesses through technology, Artlysoft combines innovation, expertise, and dedication to create value-driven solutions.
@@ -282,7 +271,6 @@ function AboutPage() {
                             <Github size={20} />
                           </a>
                         )}
-<<<<<<< HEAD
                         {member.insta && (
       <a href={member.insta} target="_blank" rel="noreferrer" className="icon-link">
         <Instagram size={20} style={{ color: '#e1306c' }} />
@@ -294,9 +282,6 @@ function AboutPage() {
       </a>
     )}
                         {!member.linkedIn && !member.github && !member.insta && !member.whatsapp &&(
-=======
-                        {!member.linkedIn && !member.github && (
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
                           <span className="no-links text-white-50 small">No handles linked</span>
                         )}
                       </div>
@@ -304,11 +289,7 @@ function AboutPage() {
                   </div>
                   
                   <div className="info-box">
-<<<<<<< HEAD
                     <h3 className='class-font'>{member.name}</h3>
-=======
-                    <h3>{member.name}</h3>
->>>>>>> b2f5e49908ea2070452b5c02853876b61da6582f
                     <p>{member.role}</p>
                   </div>
                 </div>
