@@ -35,6 +35,7 @@ import p3 from '../assets/images/Ajith.jpg';
 import p4 from '../assets/images/Tamil.jpg';
 import p5 from '../assets/images/Preethi.jpg';
 import p6 from '../assets/images/Bharani.jpg';
+import p7 from '../assets/images/Arun.jpg';
 
 import { Whatsapp } from 'react-bootstrap-icons';
 
@@ -104,6 +105,7 @@ const teamMembers = [
   {id: 4, name: "Ajith M", role: "Web Developer", image: p3, linkedIn: "https://www.linkedin.com/in/ajith-m-044823418/", github: "https://github.com/ajith17123"},
   {id: 5, name: "Tamilmozhi S", role: "Web Developer", image: p4, linkedIn: "https://www.linkedin.com/in/tamilmozhi-s-63032a311/", github: "https://github.com/Tamilmozhi2003"},
   {id: 6, name: "Preethika C", role: "Web Developer", image: p5, linkedIn: "https://www.linkedin.com/in/preethi-c-989352392/", github: "https://github.com/sudhapreethika76-eng"},
+  {id: 7, name: "Arun T", role: "Director", image: p7}
 ]
 
 
