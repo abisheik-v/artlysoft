@@ -389,7 +389,7 @@ Here are my details:
               <div className="rounded-4 shadow-lg overflow-hidden">
                 <iframe
   title="Company Location"
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4785.132964751744!2d77.62952527585661!3d12.916078116091569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae148cc2a69957%3A0x903fb322fa52bc7c!2sTHE%20VENTURE%20STUDIOS%20-%20Coworking%20space%20in%20hsr%20layout!5e1!3m2!1sen!2sin!4v1782214424804!5m2!1sen!2sin"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4785.135408593581!2d77.62947187585654!3d12.91595051609431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac470931839411%3A0xd5ca641a983f56bc!2sArtlysoft%20Private%20Limited!5e1!3m2!1sen!2sin!4v1782710446138!5m2!1sen!2sin"
   width="100%"
   height="400"
   style={{ border: 0 }}

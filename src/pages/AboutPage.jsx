@@ -31,10 +31,12 @@ import '../index.css';
 import AOS from 'aos';
 import p1 from '../assets/images/Anand.jpg';
 import p2 from '../assets/images/Abisheik.jpg';
-
 import p3 from '../assets/images/Ajith.jpg';
 import p4 from '../assets/images/Tamil.jpg';
 import p5 from '../assets/images/Preethi.jpg';
+import p6 from '../assets/images/Bharani.jpg';
+
+import { Whatsapp } from 'react-bootstrap-icons';
 
 
 const values = [
@@ -97,10 +99,11 @@ const leadership = [
 
 const teamMembers = [
   {id: 1, name: "Anand T", role: "Director", image: p1, insta: "https://www.instagram.com/anand77002?igsh=MTNxZ3d2MGNrNTlweA==", whatsapp: "https://wa.me/message/J6EL6M6BJSWIF1"},
-  {id: 2, name: "Abisheik V", role: "Frontend Developer", image: p2, linkedIn: "https://www.linkedin.com/in/abisheik-kumar-v-8a4202257/", github: "https://github.com/Abisheik-V"},
-  {id: 3, name: "Ajith M", role: "Web Developer", image: p3, linkedIn: "https://www.linkedin.com/in/ajith-m-044823418/", github: "https://github.com/ajith17123"},
-  {id: 4, name: "Tamilmozhi S", role: "Web Developer", image: p4, linkedIn: "https://www.linkedin.com/in/tamilmozhi-s-63032a311/", github: "https://github.com/Tamilmozhi2003"},
-  {id: 5, name: "Preethika C", role: "Web Developer", image: p5, linkedIn: "https://www.linkedin.com/in/preethi-c-989352392/", github: "https://github.com/sudhapreethika76-eng"},
+   {id: 2, name: "Bharani B", role: "Business Analyst", image: p6, linkedIn: "https://www.linkedin.com/in/bharani-shankar-b-8101b3228?utm_source=share_via&utm_content=profile&utm_medium=member_android"},
+  {id: 3, name: "Abisheik V", role: "Frontend Developer", image: p2, linkedIn: "https://www.linkedin.com/in/abisheik-kumar-v-8a4202257/", github: "https://github.com/Abisheik-V"},
+  {id: 4, name: "Ajith M", role: "Web Developer", image: p3, linkedIn: "https://www.linkedin.com/in/ajith-m-044823418/", github: "https://github.com/ajith17123"},
+  {id: 5, name: "Tamilmozhi S", role: "Web Developer", image: p4, linkedIn: "https://www.linkedin.com/in/tamilmozhi-s-63032a311/", github: "https://github.com/Tamilmozhi2003"},
+  {id: 6, name: "Preethika C", role: "Web Developer", image: p5, linkedIn: "https://www.linkedin.com/in/preethi-c-989352392/", github: "https://github.com/sudhapreethika76-eng"},
 ]
 
 
@@ -278,7 +281,7 @@ function AboutPage() {
     )}
     {member.whatsapp && (
       <a href={member.whatsapp} target="_blank" rel="noreferrer" className="icon-link">
-        <MessageCircle size={20} style={{ color: '#25d366' }} />
+        <Whatsapp size={20} style={{ color: '#25d366' }} />
       </a>
     )}
                         {!member.linkedIn && !member.github && !member.insta && !member.whatsapp &&(
